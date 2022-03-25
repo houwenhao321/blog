@@ -12,7 +12,7 @@
                     关于
                 </div>
                 <div :class="{ works: true, backGround: isBackGround == 2}" @click="goto('/works')">
-                    作品
+                    时间线
                 </div>
                 <div :class="{ someWords: true, backGround: isBackGround == 3}" @click="goto('/someWords')">
                     哔哔一些话
