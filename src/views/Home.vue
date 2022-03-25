@@ -1,17 +1,20 @@
 <template>
   <div class="home">
-      <NewHeader />
+      <Empty />
+      <NewHeader select = '0' />
       <img class="img" src="@/assets/img/logo.png" alt="" srcset="">
   </div>
 </template>
 
 <script>
 import NewHeader from '../components/newHeader.vue'
+import Empty from '../components/empty.vue'
 
 export default {
   name: 'Home',
   components: {
-      NewHeader
+      NewHeader,
+      Empty
   },
   data() {
     return {
@@ -29,8 +32,8 @@ export default {
 <style scoped>
 .home{
   width: 100%;
-  height: 100vh;
   background: white;
+  position: relative;
 }
 .img{
   width: 100%;
