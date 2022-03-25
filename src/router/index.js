@@ -61,8 +61,6 @@ const router = new VueRouter({
 
 
 router.beforeEach((to,from,next)=>{
-    console.log(to);
-    console.log(from);
     if (to.name == 'Home'&& window.localStorage.getItem('Cookie') == null) {
         window.alert("请先登录！");
         next('/login');

@@ -10,8 +10,8 @@
 				<hr/>
 				<div class="tag">
 					<el-tag class="tagItem" type="info">前端</el-tag>
-					<el-tag class="tagItem" type="warning" @click="showCat">有猫</el-tag>
-					<el-tag class="tagItem" type="info">有头发</el-tag>
+					<el-tag class="tagItem" type="warning">有猫</el-tag>
+					<el-tag class="tagItem" type="info">爱笑</el-tag>
 				</div>
 				<div class="chatter">
 					我是侯文豪<br>
@@ -23,6 +23,19 @@
 					许个愿：成为全栈<br>
 					再许个愿：世界和平<br>
 					skr~
+				</div>
+				<div class="showCat">
+					<el-carousel class="imgBox" :interval="4000" type="card" height="200px">
+						<el-carousel-item>
+							<img class="img" src="@/assets/car/猫.png" alt="" srcset="">
+						</el-carousel-item>
+						<el-carousel-item>
+							<img class="img" src="@/assets/car/猫1.png" alt="" srcset="">
+						</el-carousel-item>
+						<el-carousel-item>
+							<img class="img" src="@/assets/car/猫2.png" alt="" srcset="">
+						</el-carousel-item>
+					</el-carousel>
 				</div>	
 			</div>
 		</div>
@@ -41,14 +54,11 @@ export default {
   },
   data() {
     return {
-
+		showCat: false,
+		catImgArr: ['@/assets/car/猫.png','@/assets/car/猫1.png','@/assets/car/猫2.png']
     }
   },
   methods:{
-		//  展示猫咪  
-		showCat(){
-
-		}
   }
 }
 </script>
@@ -66,6 +76,7 @@ export default {
 				width: 400px;
 				height: 60vh;
 				margin: 15vh auto;
+				position: relative;
 				.tag{
 					margin: 20px;
 					.tagItem{
@@ -78,8 +89,27 @@ export default {
 					margin-top: 10px;
 					line-height: 30px;
 				}
+				.showCat{
+					position: relative;
+					top: 3vh;
+					left: -200px;
+					width: 800px;
+					.imgBox{
+						height: 100%;
+						background: white;
+						box-shadow: 0 0 5px gray;
+						.img{
+							height: 100%;
+						}
+					}
+					
+				}
 			}
         }
     }
-    
+	// .el-carousel__item{
+	// 	font-size: 14px;
+	// 	line-height: 200px;
+	// 	margin: 0;
+	// }
 </style>
